@@ -1,12 +1,18 @@
+> ### _A simple node to connect to a **ENEDIS** (French electrical distribution network) account to fetch your own energy consumption provided by the Linky smart meter and use it as you wish..._
+
 <p align="center"><img src="./docs/images/linkynode.PNG" width="30%" height="30%"/></p>
 
-> ### Module (node) Node-Red permettant de récupérer les données de consommation du compteur Enedis-Linky.
+> ### Module (node) Node-Red permettant de récupérer sur le site **_ENEDIS_** vos données de consommation électrique collectées par le compteur **_Linky_**.
+
+***
 
 ## ★ Installation
 
 1. Télécharger, extraire puis copier le repertoire **Linky** dans le dossier `\node_modules\` concerné par votre éditeur **_NODE-RED_**.
 
 3. Relancez et/ou actualisez l'onglet de votre explorateur.
+
+***
 
 ## ★ Compte ENEDIS
 
@@ -31,30 +37,31 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
     Onglet "Consommation" ➜ "Gérer ma courbe de charge" ➜ "Activer ma courbe de charge" 
 
     >Si la courbe de charge n'est pas activée (désactivable à tout moment), le module _**Linky**_ ne pourra vous transmettre les demandes de données "Journalières", mais les autres demandes seront considérées.
- 
+
+***
+
 ## ★ Configuration du module 
 
 - Double-cliquez sur le node <img src="./docs/images/linkynode.PNG" width="13%" height="13%"/> pour en ouvrir l'éditeur...
 
     <img src="./docs/images/editlinkynode.PNG" width="50%" height="50%"/>
 
-- Renseigner les champs :
+- Renseigner les champs correspondants à vos codes utilisés sur le site **_ENEDIS_**.
 
-    - <code>Username</code> :
-    - <code>Password</code> :
-
-    Correspondants à vos codes utilisés sur le site **_ENEDIS_**.
-
+    - <code>Username</code> : Adresse e-mail.
+    - <code>Password</code> : Mot de passe.
 
     >Pour assurer la confidentialité, les champs ci-dessus possédent la propriété NODE-RED `credentials`:
     >- Stockage des valeurs hors du fichier du "flow" principal.
     >- Ne sont pas inclus en cas d'exportation des "flows" en dehors de l'éditeur.
 
+***
+
 ## ★ Fonctionnement
 
 ### Inputs
 
-En entrée, le module demande uniquement et simplement de lui fournir les dates de début et de fin du relevé que vous souhaitez obtenir en retour.
+En entrée, le module demande uniquement et simplement un message comprenant les dates de début et de fin du relevé de consommation que vous souhaitez obtenir en retour.
 
 #### Format du message `msg` en entrée
 
@@ -91,8 +98,8 @@ Aprés l'envoi de la requète sur le site **_ENEDIS_**, le module renvoie (en so
 msg {
     "topic": "linky",
     "payload": {
-        "..." : {...},
-        "linky": {object}
+        "..." : {"..."},
+        "linky": {"your_JSON_datas"}
     }
 }
 ```
@@ -108,16 +115,19 @@ msg {
 - Ajout de la propriété `linky`
 - Valeur ➜ Objet représentant les valeurs demandées.
 
+***
+
 ## ★ Utilisation
 
-  - Exemples :
-
-
+***
 
 ## ★ Compatibilité
 
+***
+
 ## ★ Restrictions
 
+***
 
 ## ★ License
 
