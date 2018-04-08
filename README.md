@@ -155,4 +155,4 @@ _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées su
 
 ## ★ License
 
-Logiciel libre sous [licence MIT](https://github.com/PhilBri/SARAH-V5-Livebox/blob/master/LICENSE)
+Logiciel libre sous [licence MIT](https://github.com/PhilBri/Node-Linky/blob/master/LICENSE)
