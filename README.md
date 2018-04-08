@@ -33,7 +33,7 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 - Connectez-vous sur votre ["espace client"](https://espace-client-particuliers.enedis.fr/group/espace-particuliers/).
 
-    Activez votre _*courbe de charge*_ (l'accord pour la collecte de vos données de consommation élèctrique toutes les 1/2 heures) si vous le souhaitez.
+    Activez votre _*courbe de charge*_ (l'accord pour la collecte de vos données de consommation électrique toutes les 1/2 heures) si vous le souhaitez.
 
     Onglet "Consommation" ➜ "Gérer ma courbe de charge" ➜ "Activer ma courbe de charge" 
 
@@ -53,7 +53,7 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
     
     <code>Password</code> ➜ Mot de passe.
 
-    >_Pour assurer la confidentialité, les champs ci-dessus possédent la propriété NODE-RED `credentials`:_
+    >##### _Pour assurer la confidentialité, les champs ci-dessus possédent la propriété NODE-RED `credentials`:_
     >- _Stockage de leur valeurs hors du fichier principal du "flow"._
     >- _Ne sont pas inclus en cas d'exportation des "flows" en dehors de l'éditeur._
 
