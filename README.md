@@ -81,12 +81,10 @@ msg {
 
 - Valeur ➜ `"linky"` permettant éventuellement de publier sur un `topic` ou de tester la validité du message.
 
-
 `msg.payload` {JSON}
 
 - `msg.payload.début` {date} ➜ Date de début du relevé demandé.
 - `msg.payload.fin` {date} ➜ Date de fin du relevé demandé.
-
 
 >_Formats {date} acceptés = `"JJ-MM-AAAA"` ou `"JJ/MM/AAAA"`_
 
@@ -123,16 +121,16 @@ msg {
 
 _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées sur la page dédiée au ["suivi de consommation"](https://espace-client-particuliers.enedis.fr/group/espace-particuliers/suivi-de-consommation).
 
-- Par heure :
+- #### Par heure :
     - Toutes les 1/2h durant 24 heures et par jour calendaire.
-- Par jour :
+- #### Par jour :
     - Entre 2 dates séparées de 1 à 31 jours maxi.
-- Par mois :
+- #### Par mois :
     - Compris entre 2 et 12 mois.
-- Par an :
+- #### Par an :
     - Indisponible car moins d'un an d'installation.
 
-Le module selectionnera la requête adaptée aux dates que vous aurez passées et de ce fait minimise les risques d'erreurs. 
+>Le module selectionnera la requête adaptée aux dates que vous aurez passées et de ce fait minimise les risques d'erreurs. 
 
 #### Exemples de requêtes :
 
