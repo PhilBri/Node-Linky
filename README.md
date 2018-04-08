@@ -2,7 +2,8 @@
 
 <p align="center"><img src="./docs/images/linkynode.PNG" width="30%" height="30%"/></p>
 
-> ### Module (node) Node-Red permettant de récupérer sur le site **_ENEDIS_** vos données de consommation électrique collectées par le compteur **_Linky_**.
+***
+### Module (node) Node-Red permettant de récupérer sur le site **_ENEDIS_** vos données de consommation électrique collectées par le compteur **_Linky_**.
 
 ***
 
@@ -26,9 +27,9 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 - Suivez le lien qui vous a été communiqué et saisissez vos identifiants et mot de passe dans le formulaire.
 
-    >Comptez environ 3 à 4 semaines aprés l'installation de votre compteur **_Linky_** avant d'avoir vos données accessibles en ligne...
+    >_Comptez environ 3 à 4 semaines aprés l'installation de votre compteur **_Linky_** avant d'avoir vos données accessibles en ligne..._
 
-### Activer votre compte :
+### Activer votre compte
 
 - Connectez-vous sur votre ["espace client"](https://espace-client-particuliers.enedis.fr/group/espace-particuliers/).
 
@@ -36,7 +37,7 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
     Onglet "Consommation" ➜ "Gérer ma courbe de charge" ➜ "Activer ma courbe de charge" 
 
-    >Si la courbe de charge n'est pas activée (désactivable à tout moment), le module _**Linky**_ ne pourra vous transmettre les demandes de données "Journalières", mais les autres demandes seront considérées.
+    >_Si la courbe de charge n'est pas activée (désactivable à tout moment), le module _**Linky**_ ne pourra vous transmettre les demandes de données "Journalières", mais les autres demandes seront considérées._
 
 ***
 
@@ -48,12 +49,12 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 - Renseigner les champs correspondants à vos codes utilisés sur le site **_ENEDIS_**.
 
-    - <code>Username</code> : Adresse e-mail.
-    - <code>Password</code> : Mot de passe.
+    - <code>Username</code> ➜ Adresse e-mail.
+    - <code>Password</code> ➜ Mot de passe.
 
-    >Pour assurer la confidentialité, les champs ci-dessus possédent la propriété NODE-RED `credentials`:
-    >- Stockage des valeurs hors du fichier du "flow" principal.
-    >- Ne sont pas inclus en cas d'exportation des "flows" en dehors de l'éditeur.
+    >_Pour assurer la confidentialité, les champs ci-dessus possédent la propriété NODE-RED `credentials`:_
+        >- _Stockage des valeurs hors du fichier du "flow" principal._
+        >- _Ne sont pas inclus en cas d'exportation des "flows" en dehors de l'éditeur._
 
 ***
 
@@ -86,11 +87,11 @@ msg {
 - `msg.payload.fin` {date} ➜ Date de fin du relevé demandé.
 
 
->Format {date} accepté = `"JJ-MM-AAAA"` ou `"JJ/MM/AAAA"`
+>_Formats {date} acceptés = `"JJ-MM-AAAA"` ou `"JJ/MM/AAAA"`_
 
 ### Outputs
 
-Aprés l'envoi de la requète sur le site **_ENEDIS_**, le module renvoie (en sortie) les données demandées.
+Aprés l'envoi de la requète sur le site **_ENEDIS_**, le module retourne le message d'entrée surchargé des données demandées.
 
 #### Format du message `msg` en sortie
 
