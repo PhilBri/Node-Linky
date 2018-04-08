@@ -1,4 +1,4 @@
-<p align="center"><img src="./images/linkynode.png" width="30%" height="30%"/></p>
+<p align="center"><img src="./images/linkynode.PNG" width="30%" height="30%"/></p>
 
 > ### Module (node) Node-Red permettant de récupérer les données de consommation du compteur Enedis-Linky.
 
@@ -34,7 +34,7 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
  
 ## ★ Configuration du module 
 
-- Double-cliquez sur le node <img src="./images/linkynode.png" width="13%" height="13%"/> pour en ouvrir l'éditeur...
+- Double-cliquez sur le node <img src="./images/linkynode.PNG" width="13%" height="13%"/> pour en ouvrir l'éditeur...
 
     <img src="./images/editlinkynode.PNG" width="50%" height="50%"/>
 
