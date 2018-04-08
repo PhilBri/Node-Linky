@@ -53,7 +53,7 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
     
     <code>Password</code> ➜ Mot de passe.
 
-    >_Pour assurer la confidentialité, les champs ci-dessus possédent la propriété NODE-RED **`credentials`**._
+    >#### _Pour assurer la confidentialité, les champs ci-dessus possédent la propriété NODE-RED `credentials`._
     >- _Stockage de leur valeurs hors du fichier principal du "flow"._
     >- _Ne sont pas inclus en cas d'exportation des "flows" en dehors de l'éditeur._
 
