@@ -27,7 +27,7 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 - Suivez le lien qui vous a été communiqué et saisissez vos identifiants et mot de passe dans le formulaire.
 
-    >_Comptez environ 3 à 4 semaines aprés l'installation de votre compteur **_Linky_** avant d'avoir vos données accessibles en ligne..._:confused:
+    >_Comptez environ 3 à 4 semaines aprés l'installation de votre compteur **_Linky_** avant d'avoir vos données accessibles en ligne..._ :hushed:
 
 ### Activer votre compte
 
@@ -121,11 +121,29 @@ msg {
 
 ## ★ Utilisation
 
-| Date début | Date Fin   | Fichier obtenu |
-|:----------:|:----------:|:---------------|
-| 01-01-2018 | 01-01-2018 | Journalier     |
-| 
+_**ENEDIS**_ propose 4 possibilités de consultation de vos données listées sur la page dédiée au ["suivi de consommation"](https://espace-client-particuliers.enedis.fr/group/espace-particuliers/suivi-de-consommation).
 
+- Par heure :
+    - Toutes les 1/2h durant 24 heures et par jour calendaire.
+- Par jour :
+    - Entre 2 dates séparées de 1 à 31 jours maxi.
+- Par mois :
+    - Compris entre 2 et 12 mois.
+- Par an :
+    - Indisponible car moins d'un an d'installation.
+
+Le module selectionnera la requête adaptée aux dates que vous aurez passées et de ce fait minimise les risques d'erreurs. 
+
+#### Exemples de requêtes :
+
+| Date début | Date Fin   | Requête  | Remarques        |
+|:----------:|:----------:|:---------|:-----------------|
+| 01-01-2018 | 01-01-2018 | Par heure| Dates identiques |
+| 10-02-2018 | 11-02-2018 | Par jour | Durée = 1 jour   |
+| 05-03-2018 | 04-04-2018 | Par Jour | Durée = 31 jours |
+| 05-03-2018 | 05-04-2018 | Par mois | Durée > 31 jours |
+| 10-10-2017 | 20-03-2018 | Par mois | D'octobre à mars |
+| 01-02-2017 | 28-02-2018 | Par mois | Durée 12 mois    |
 
 ***
 
