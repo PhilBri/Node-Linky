@@ -121,13 +121,13 @@ msg {
 
 _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées sur la page dédiée au ["suivi de consommation"](https://espace-client-particuliers.enedis.fr/group/espace-particuliers/suivi-de-consommation).
 
-- #### Par heure :
+- _**Par heure**_
     - Toutes les 1/2h durant 24 heures et par jour calendaire.
-- #### Par jour :
+- _**Par jour**_
     - Entre 2 dates séparées de 1 à 31 jours maxi.
-- #### Par mois :
+- _**Par mois**_
     - Compris entre 2 et 12 mois.
-- #### Par an :
+- _**Par an**_
     - Indisponible car moins d'un an d'installation.
 
 >Le module selectionnera la requête adaptée aux dates que vous aurez passées et de ce fait minimise les risques d'erreurs. 
