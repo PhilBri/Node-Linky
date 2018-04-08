@@ -1,0 +1,24 @@
+{
+    "name": "linky",
+    "version": "0.1",
+    "description": "Node-RED node to get electrtical consumtion with linky",
+    "homepage": "https://philbri.github.io/Linky",
+    "dependencies": {
+
+    },
+    "keywords": ["node-red", "linky", "enedis", "edf", "iot"],
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://www.opensource.org/licenses/mit-license.php"
+    }],
+    "node-red": {
+        "version": ">=0.1",
+        "nodes": {
+            "linky": "linky.js"
+        }
+    },
+    "author": {
+        "name": "Phil Bri",
+        "email": "phil.bri@hotmail.com"
+    }
+}
