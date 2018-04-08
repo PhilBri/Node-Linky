@@ -27,7 +27,7 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 - Suivez le lien qui vous a été communiqué et saisissez vos identifiants et mot de passe dans le formulaire.
 
-    >_Comptez environ 3 à 4 semaines aprés l'installation de votre compteur **_Linky_** avant d'avoir vos données accessibles en ligne..._
+    >_Comptez environ 3 à 4 semaines aprés l'installation de votre compteur **_Linky_** avant d'avoir vos données accessibles en ligne..._:confused:
 
 ### Activer votre compte
 
@@ -120,6 +120,12 @@ msg {
 ***
 
 ## ★ Utilisation
+
+| Date début | Date Fin   | Fichier obtenu |
+|:----------:|:----------:|:---------------|
+| 01-01-2018 | 01-01-2018 | Journalier     |
+| 
+
 
 ***
 
