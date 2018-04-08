@@ -1,4 +1,4 @@
-> ### _A simple node to connect to a **ENEDIS** (French electrical distribution network) account to fetch your own energy consumption provided by the Linky smart meter and use it as you wish..._
+### _A simple node to connect to a **ENEDIS** (French electrical distribution network) account to fetch your own energy consumption provided by the Linky smart meter and use it as you wish..._
 
 <p align="center"><img src="./docs/images/linkynode.PNG" width="30%" height="30%"/></p>
 
@@ -49,12 +49,13 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 - Renseigner les champs correspondants à vos codes utilisés sur le site **_ENEDIS_**.
 
-    - <code>Username</code> ➜ Adresse e-mail.
-    - <code>Password</code> ➜ Mot de passe.
+    <code>Username</code> ➜ Adresse e-mail.
+    
+    <code>Password</code> ➜ Mot de passe.
 
     >_Pour assurer la confidentialité, les champs ci-dessus possédent la propriété NODE-RED `credentials`:_
-        >- _Stockage des valeurs hors du fichier du "flow" principal._
-        >- _Ne sont pas inclus en cas d'exportation des "flows" en dehors de l'éditeur._
+    >- _Stockage de leur valeurs hors du fichier principal du "flow"._
+    >- _Ne sont pas inclus en cas d'exportation des "flows" en dehors de l'éditeur._
 
 ***
 
