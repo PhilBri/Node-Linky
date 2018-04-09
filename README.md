@@ -45,7 +45,7 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 - Double-cliquez sur le node <img src="./docs/images/linkynode.PNG" width="13%" height="13%"/> pour en ouvrir l'éditeur des propriétés...
 
-    <p align="center"><img src="./docs/images/editlinkynode.PNG" width="50%" height="50%"/></p>
+    <img src="./docs/images/editlinkynode.PNG" width="50%" height="50%"/>
 
 - Renseigner les champs correspondants à vos codes utilisés sur le site **_ENEDIS_**.
 
@@ -130,9 +130,9 @@ _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées su
 - _**Par an**_
     - Indisponible car moins d'un an d'installation.
 
->Le module selectionnera la requête adaptée aux dates que vous aurez passées et de ce fait minimise les risques d'erreurs. 
+    >_Le module selectionnera la requête adaptée aux dates que vous aurez passées et de ce fait minimise les risques d'erreurs._ 
 
-- _**Exemples de requêtes**_
+    **Exemples de requêtes**
 
     | Date début | Date Fin   | Requête  | Remarques        | Payload |
     |:----------:|:----------:|:---------|:-----------------|:-------:|
