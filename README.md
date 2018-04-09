@@ -83,7 +83,7 @@ msg {
 
 `msg.payload` {JSON}
 
-- `msg.payload.début` {date} ➜ Date de début du relevé demandé.
+- `msg.payload.debut` {date} ➜ Date de début du relevé demandé.
 - `msg.payload.fin` {date} ➜ Date de fin du relevé demandé.
 
 >_Formats {date} acceptés = `"JJ-MM-AAAA"` ou `"JJ/MM/AAAA"`_
@@ -130,9 +130,9 @@ _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées su
 - _**Par an**_
     - Indisponible car moins d'un an d'installation.
 
-    >_Le module selectionnera la requête adaptée aux dates que vous aurez passées et de ce fait minimise les risques d'erreurs._ 
+>_Le module selectionnera la requête adaptée aux dates que vous aurez passées et de ce fait minimise les risques d'erreurs._ 
 
-    **Exemples de requêtes**
+- _**Exemples de requêtes**_
 
     | Date début | Date Fin   | Requête  | Remarques        | Payload |
     |:----------:|:----------:|:---------|:-----------------|:-------:|
