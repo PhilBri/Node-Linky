@@ -31,7 +31,7 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 ### Activer votre compte
 
-- Connectez-vous sur votre ["espace client"](https://espace-client-particuliers.enedis.fr/group/espace-particuliers/).
+- Connectez-vous sur votre ["Espace client"](https://espace-client-particuliers.enedis.fr/group/espace-particuliers/).
 
     Activez votre _*courbe de charge*_ (l'accord pour la collecte de vos données de consommation électrique toutes les 1/2 heures) si vous le souhaitez.
 
@@ -43,9 +43,9 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 ## ★ Configuration du module 
 
-- Double-cliquez sur le node <img src="./docs/images/linkynode.PNG" width="13%" height="13%"/> pour en ouvrir l'éditeur...
+- Double-cliquez sur le node <img src="./docs/images/linkynode.PNG" width="13%" height="13%"/> pour en ouvrir l'éditeur des propriétés...
 
-    <img src="./docs/images/editlinkynode.PNG" width="50%" height="50%"/>
+    <p align="center"><img src="./docs/images/editlinkynode.PNG" width="50%" height="50%"/></p>
 
 - Renseigner les champs correspondants à vos codes utilisés sur le site **_ENEDIS_**.
 
@@ -132,16 +132,16 @@ _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées su
 
 >Le module selectionnera la requête adaptée aux dates que vous aurez passées et de ce fait minimise les risques d'erreurs. 
 
-#### Exemples de requêtes :
+- _**Exemples de requêtes**_
 
-| Date début | Date Fin   | Requête  | Remarques        |
-|:----------:|:----------:|:---------|:-----------------|
-| 01-01-2018 | 01-01-2018 | Par heure| Dates identiques |
-| 10-02-2018 | 11-02-2018 | Par jour | Durée = 1 jour   |
-| 05-03-2018 | 04-04-2018 | Par Jour | Durée = 31 jours |
-| 05-03-2018 | 05-04-2018 | Par mois | Durée > 31 jours |
-| 10-10-2017 | 20-03-2018 | Par mois | D'octobre à mars |
-| 01-02-2017 | 28-02-2018 | Par mois | Durée 12 mois    |
+    | Date début | Date Fin   | Requête  | Remarques        | Payload |
+    |:----------:|:----------:|:---------|:-----------------|:-------:|
+    | 01-01-2018 | 01-01-2018 | Par heure| Dates identiques |`{"debut": "01-01-2018, "fin": "01-01-2018"}`|
+    | 10-02-2018 | 11-02-2018 | Par jour | Durée = 1 jour   |`{"debut": "10-02-2018, "fin": "11-02-2018"}`|
+    | 05-03-2018 | 04-04-2018 | Par Jour | Durée = 31 jours |`{"debut": "05-03-2018, "fin": "04-04-2018"}`|
+    | 05-03-2018 | 05-04-2018 | Par mois | Durée > 31 jours |`{"debut": "05-03-2018, "fin": "05-03-2018"}`|
+    | 10-10-2017 | 20-03-2018 | Par mois | D'octobre à mars |`{"debut": "10-10-2018, "fin": "20-03-2018"}`|
+    | 01-02-2017 | 28-02-2018 | Par mois | Durée 12 mois    |`{"debut": "01-02-2017, "fin": "28-02-2018"}`|
 
 ***
 
