@@ -59,7 +59,7 @@ module.exports = function (RED) {
             p_p_cacheability:   'cacheLevelPage',
             p_p_col_id:         'column-1'
         };
-        var linky   = this,
+        var linky   = this;
 
         if (!linky.user || !linky.pass) {
             linky.status ({fill: 'red', shape: 'dot', text: 'No Credentials !'})
