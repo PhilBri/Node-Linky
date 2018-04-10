@@ -1,14 +1,15 @@
-var moment  = require ('moment'),
-    sAgent  = require ('superagent');
-
 module.exports = function (RED) {
     "use strict";
     function linky (config) {
+        var moment  = require ('moment'),
+            logUrl  = 'https://espace-client-connexion.enedis.fr/auth/UI/Login',
+            apiUrl  = 'https://espace-client-particuliers.enedis.fr/group/espace-particuliers/suivi-de-consommation';
+
         RED.nodes.createNode (this, config);
         this.name   = config.name;
         this.user   = this.credentials.username;
         this.pass   = this.credentials.password;
-        this.req    = sAgent.agent();
+        this.req    = require ('superagent').agent();
         this.cookie = null;
 
         this.getCookie = function (cookieStr, retCookie) {
@@ -58,10 +59,7 @@ module.exports = function (RED) {
             p_p_cacheability:   'cacheLevelPage',
             p_p_col_id:         'column-1'
         };
-
         var linky   = this,
-            logUrl  = 'https://espace-client-connexion.enedis.fr/auth/UI/Login',
-            apiUrl  = 'https://espace-client-particuliers.enedis.fr/group/espace-particuliers/suivi-de-consommation';
 
         if (!linky.user || !linky.pass) {
             linky.status ({fill: 'red', shape: 'dot', text: 'No Credentials !'})
