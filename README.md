@@ -144,6 +144,13 @@ _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées su
     | 01-02-2017 | 28-02-2018 | Par mois | Durée 12 mois    |`{"debut": "01-02-2017, "fin": "28-02-2018"}`|
 
 ***
+## ★ Format de fichier
+
+Le fichier retourné par _**ENEDIS**_  est au format `{JSON}` et est ajouté au payload en sortie du module dans la propriété `"linky"`.
+
+- Des exemples commentés sont disponibles [ici](./docs/linky_files_examples.js )
+
+***
 
 ## ★ Compatibilité
 
