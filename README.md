@@ -148,15 +148,52 @@ _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées su
 
 Le fichier retourné par _**ENEDIS**_  est au format `{JSON}` et est ajouté au payload en sortie du module dans la propriété `"linky"`.
 
+- Objet `msg.payload` 
+
+``` js
+// Fichier suivant requête "par jour" 
+// Données collectées toutes les 1/2h = 48 valeurs en retour
+payload {
+    {
+        debut : "JJ/MM/AAAA",
+        fin : "JJ/MM/AAAA"
+    },
+    linky {
+        etat {
+            "valeur": "temine"
+        },
+        graphe {
+            "decalage": 0,
+            "puissanceSouscrite": 12
+        },
+        periode {
+            "dateFin": "JJ/MM/AAAA",
+            "dateDebut": "JJ/MM/AAAA"
+        },
+        data [
+            {"valeur": 9.999,"ordre": 1},
+            {"valeur": 9.999,"ordre": 2},
+            {"valeur": "...","ordre":'n'},
+            {"valeur": 9.999,"ordre": 48}
+        ]
+    }
+}
+```
+
 - Des exemples commentés sont disponibles [ici](./docs/linky_files_examples.js )
 
 ***
 
 ## ★ Compatibilité
 
+Le module assure le pass-trough des `{msg}` entrant en les surchargeants des valeurs demandées.
+- Il peut donc s'intégrer facilement dans des frameworks comme [SARAH V5](http://blog.encausse.net/2017/10/12/viseo-bot-framework-et-sarah-v5/)
+
 ***
 
 ## ★ Restrictions
+
+Le site _**ENEDIS**_ est une vraie catastrophe en termes de disponibilté et de service...
 
 ***
 
