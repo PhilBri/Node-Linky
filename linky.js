@@ -24,7 +24,7 @@ module.exports = function (RED) {
                     gx_charset : "UTF-8" 
                 })
                 .end (function (err, res) {
-                    if (err) return linky.error ('Logging: ' + err);
+                    if (res.error) return linky.error ('Logging error : ' + res.error + '-' + err.status);
                     var cookies = (res.request.cookies.split(';'));
                     for (var names in cookies) {
                         if (cookieStr.test (cookies[names])) 
@@ -44,7 +44,7 @@ module.exports = function (RED) {
                 .type ('form')
                 .send (linky.payload)
                 .end (function (err, res) {
-                    if (err) return linky.error ('Fetching: ' + err);
+                    if (res.error) return linky.error ('Fetching error : ' + res.error + '-' + err.status);
                     datas (JSON.parse (res.text));
                 })
         }
