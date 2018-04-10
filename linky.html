@@ -1,0 +1,96 @@
+<script type="text/javascript">
+    RED.nodes.registerType ('Enedis-Linky',{
+        category: 'devices',
+        color: '#96ca2d',//'#c4ff0e',
+        icon: 'enedis_linky_icon.png',
+        defaults: {
+            name: {value: "", required: false},
+            username: {value: "", required: true},
+            password: {value: "", required: true},
+        },
+        credentials: {
+            username: {type: "text"},
+            password: {type: "password"}
+        },
+        inputs: 1,
+        outputs: 1,
+        align: 'left',
+        label: function () {
+            return this.name || "Enedis-Linky";
+            return this.username || null;
+            return this.password || null;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Enedis-Linky">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Node name</label>
+        <input type="text" id="node-input-name" placeholder="Enedis-Linky" />
+    </div>
+     <div class="form-row">
+        <label for="node-input-username"><i class="fa fa-user-secret"></i> Username</label>
+        <input type="text" id="node-input-username" placeholder="Your Enedis username"/>
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="fa fa-paw"></i> Password</label>
+        <input type="password" id="node-input-password" placeholder="Your Enedis password"/>
+    </div>
+    <div class="form-tips">
+        <p>You need to configure your <span style="font-weight:bold;font-style: italic;">Enedis </span> account here.</p>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="Enedis-Linky">
+    <p>A simple node to connect to a <span style="font-style: italic;"><b>Enedis </b>(French electrical distribution network) </span>account to fetch your own electric consumption provided by <span style="font-weight:bold;font-style: italic;">LINKY </span>smart-meter and use it like you want.</p>
+
+    <h3>Pre-requisite:</h3>
+    <dl class="message-properties">
+        <dd> Create your account: </dd>
+        <ul>
+            <li>Go to Enedis website: </li>
+            <a href="https://espace-client-particuliers.enedis.fr/web/espace-particuliers/creation-de-compte"> "Création de mon compte"</a>
+            <li>Set your personnal data in fields :</li>
+            You will receive a registration link (mail or post)
+            <li>Follow link to set your username &amp; password.</li>
+        </ul>
+    </dl>
+    <dl class="message-properties">
+        <dd> Enable your account: </dd>
+        <ul>
+            <li>Activate load curve recording on <span style="font-weight:bold;font-style: italic;">Enedis</span> website: </li>
+            <p><a href="https://espace-client-particuliers.enedis.fr/group/espace-particuliers/">https://espace-client-particuliers.enedis.fr/group/espace-particuliers/</a></p>
+            <li>Enable the data collection:</li>
+            <p>"Consommation" > "Gérer ma courbe de charge" > "Activer ma courbe de charge"</p>
+        </ul>
+    </dl>
+
+    <h3>Properties</h3>
+    <dl class="message-properties">
+        <dt>Node name <span class="property-type">string</span></dt>
+        <dd>Can be used to override the default name of the node.</dd>
+        <dt>Username <span class="property-type">string</span></dt>
+        <dd> Enedis Username.</dd>
+        <dt>Password <span class="property-type">string</span></dt>
+        <dd> Enedis Password (masked text).</dd>
+    </dl>
+
+    <h3>Output</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">object</span></dt>
+        <dd> The consumption datas in <code>JSON</code> format.</dd>
+    </dl>
+
+    <h3>Details</h3>
+    <dl class="message-properties">
+        <dd>
+            <span style="font-weight:bold;text-decoration: underline;">Note:</span><br>
+            <code>Username</code> and <code>Password</code> fields have Node-RED <code>credentials</code> property for privacy:
+        </dd>
+        <ul>
+            <li>Stored separately to the main flow file.</li>
+            <li>Do not get included when flows are exported from the editor.</li>
+        </ul>
+    </dl>
+</script>
+
