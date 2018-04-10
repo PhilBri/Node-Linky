@@ -1,6 +1,6 @@
 ### _A simple node to connect to a **ENEDIS** (French electrical distribution network) account to fetch your own energy consumption provided by the Linky smart meter and use it as you wish..._
 
-<p align="center"><img src="./docs/images/linkynode.PNG" width="30%" height="30%"/></p>
+<p align="center"><img src="./images/linkynode.PNG" width="30%" height="30%"/></p>
 
 ***
 ### Module (node) Node-Red permettant de récupérer sur le site **_ENEDIS_** vos données de consommation électrique collectées par le compteur **_Linky_**.
@@ -43,9 +43,9 @@ Afin de pouvoir collecter vos données de consommation issues de votre fournisse
 
 ## ★ Configuration du module 
 
-- Double-cliquez sur le node <img src="./docs/images/linkynode.PNG" width="13%" height="13%"/> pour en ouvrir l'éditeur des propriétés...
+- Double-cliquez sur le node <img src="./images/linkynode.PNG" width="13%" height="13%"/> pour en ouvrir l'éditeur des propriétés...
 
-    <img src="./docs/images/editlinkynode.PNG" width="50%" height="50%"/>
+    <img src="./images/editlinkynode.PNG" width="50%" height="50%"/>
 
 - Renseigner les champs correspondants à vos codes utilisés sur le site **_ENEDIS_**.
 
@@ -148,7 +148,7 @@ _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées su
 
 Le fichier retourné par _**ENEDIS**_  est au format `{JSON}` et est ajouté au payload en sortie du module dans la propriété `"linky"`.
 
-- Des exemples commentés sont disponibles [ici](./docs/linky_files_examples.js )
+- Des exemples commentés sont disponibles [ici](./linky_files_examples.js )
 
 ***
 
