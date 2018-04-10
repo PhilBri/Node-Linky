@@ -12,6 +12,7 @@ module.exports = function (RED) {
         this.cookie = null;
 
         this.getCookie = function (cookieStr, retCookie) {
+            linky.status ({fill: 'grey', shape: 'ring', text: 'Checking Credentials...'});
             linky.req
                 .post (logUrl)
                 .type ('form')
@@ -23,6 +24,7 @@ module.exports = function (RED) {
                     gx_charset : "UTF-8" 
                 })
                 .end (function (err, res) {
+                    if (err) return linky.error ('Logging: ' + err);
                     var cookies = (res.request.cookies.split(';'));
                     for (var names in cookies) {
                         if (cookieStr.test (cookies[names])) 
@@ -35,12 +37,14 @@ module.exports = function (RED) {
         }
 
         this.getDatas = function (datas) {
+            linky.status ({fill: 'green', shape: 'dot', text: 'Fetching datas...'});
             linky.req
                 .post (apiUrl)
                 .set ('Cookie', linky.cookie)
                 .type ('form')
                 .send (linky.payload)
                 .end (function (err, res) {
+                    if (err) return linky.error ('Fetching: ' + err);
                     datas (JSON.parse (res.text));
                 })
         }
@@ -59,19 +63,14 @@ module.exports = function (RED) {
             logUrl  = 'https://espace-client-connexion.enedis.fr/auth/UI/Login',
             apiUrl  = 'https://espace-client-particuliers.enedis.fr/group/espace-particuliers/suivi-de-consommation';
 
-
         if (!linky.user || !linky.pass) {
             linky.status ({fill: 'red', shape: 'dot', text: 'No Credentials !'})
             return linky.error ('No credentials... Check Username/Password !');
         }
 
-        linky.status ({fill: 'grey', shape: 'ring', text: 'Checking Credentials...'});
-
         linky.getCookie (new RegExp ('JSESSIONID'), function (retCookie) {
             linky.warn (retCookie || 'Can\'t get cookie or token !');
-
             if (!retCookie) return linky.status ({fill: 'red', shape: 'dot', text: 'Logging error !'});
-            
             linky.cookie = retCookie;
             linky.status ({fill: 'yellow', shape: 'ring', text: 'Logged-in successfully'});
         });
@@ -100,6 +99,7 @@ module.exports = function (RED) {
                 msg.payload.linky = datas;
                 msg['topic'] = 'linky';
                 linky.send (msg);
+                linky.status ({fill: 'yellow', shape: 'ring', text: 'Logged-in successfully'});
             });
         });
     }
