@@ -75,10 +75,48 @@
         <dd> Enedis Password (masked text).</dd>
     </dl>
 
+    <h3>Input</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">object</span></dt>
+        <dd> Time interval for datas in<code>JSON</code> format.<dd>
+        <pre><CODE>"payload" : {<br>    "debut": "JJ-MM-AAAA",<br>    "fin": "JJ-MM-AAAA"<br>}</CODE></pre>
+
+    </dl>
+
+
     <h3>Output</h3>
     <dl class="message-properties">
         <dt>payload <span class="property-type">object</span></dt>
         <dd> The consumption datas in <code>JSON</code> format.</dd>
+        <dd> Example for daily datas (fetched every half hours).</dd>
+
+<pre><CODE>payload {
+  {
+    debut : "JJ/MM/AAAA",
+    fin : "JJ/MM/AAAA"
+  },
+  linky {
+    etat {
+      "valeur": "temine"
+    },
+    graphe {
+      "decalage": 0,
+      "puissanceSouscrite": 12
+    },
+    periode {
+      "dateFin": "JJ/MM/AAAA",
+      "dateDebut": "JJ/MM/AAAA"
+    },
+    data [
+      {"valeur": 9.999,"ordre": 1},
+      {"valeur": 9.999,"ordre": 2},
+      {"valeur": "...","ordre":'n'},
+      {"valeur": 9.999,"ordre": 48}
+    ]
+  }
+}</CODE></pre>
+
+    <dd>More examples <a href= "https://github.com/PhilBri/Node-Linky/blob/master/docs/linky_files_examples.js">here</a>.</dd>
     </dl>
 
     <h3>Details</h3>
@@ -92,5 +130,8 @@
             <li>Do not get included when flows are exported from the editor.</li>
         </ul>
     </dl>
+
+    <h3>References</h3>
+    <ul><li><a href="https://github.com/PhilBri/Node-Linky">GitHub</a> - The node github repository.</li></ul>
 </script>
 
