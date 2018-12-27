@@ -1,8 +1,8 @@
 {
     "name": "linky",
     "version": "0.1",
-    "description": "Node-RED node to get electrtical consumtion with linky",
-    "homepage": "https://philbri.github.io/Linky",
+    "description": "Node-RED node to get power consumption with Linky",
+    "homepage": "https://philbri.github.io/Node-Linky/",
     "dependencies": {
 
     },
