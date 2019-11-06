@@ -139,7 +139,7 @@ _**ENEDIS**_ propose 4 possibilités de consultation de vos données listées su
     | 01-01-2018 | 01-01-2018 | Par heure| Dates identiques |`{"debut": "01-01-2018, "fin": "01-01-2018"}`|
     | 10-02-2018 | 11-02-2018 | Par jour | Durée = 1 jour   |`{"debut": "10-02-2018, "fin": "11-02-2018"}`|
     | 05-03-2018 | 04-04-2018 | Par Jour | Durée = 31 jours |`{"debut": "05-03-2018, "fin": "04-04-2018"}`|
-    | 05-03-2018 | 05-04-2018 | Par mois | Durée > 31 jours |`{"debut": "05-03-2018, "fin": "05-03-2018"}`|
+    | 05-03-2018 | 05-04-2018 | Par mois | Durée > 31 jours |`{"debut": "05-03-2018, "fin": "05-04-2018"}`|
     | 10-10-2017 | 20-03-2018 | Par mois | D'octobre à mars |`{"debut": "10-10-2018, "fin": "20-03-2018"}`|
     | 01-02-2017 | 28-02-2018 | Par mois | Durée 12 mois    |`{"debut": "01-02-2017, "fin": "28-02-2018"}`|
 
